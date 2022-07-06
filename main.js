@@ -85,8 +85,13 @@ function play(){
 
 
 function reset(){
+    playButton.disabled = false;
     userInput.value = ""
+    history=[];
+    chances = 5;
+    chanceArea.innerHTML = `남은찬스${chances}`
     pickRandomNum()
+    
 }
 
 
@@ -106,13 +111,15 @@ let j = 1
         
         document.write("<div id='left_area'>");
         document.write("<h3>"+i+"단</h3>");
+        // leftArea.append("<h3>"+i+"단</h3>");
         // console.log(i)   
 
 
         for(j=1; j<10; j++){
 
         document.write(i+ "X" +j+ "=" +i*j+" <br><br>");
-
+        // leftArea.append(`${i}X${j}=${i*j}`);
+        // leftArea.append("<br><br>");
         // leftArea.textContent=`${i}X${j}=${i*j}`;
         // console.log(i*j)     
 
